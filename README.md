@@ -2,5 +2,5 @@
 
 Name: Muhammad Ali   ID:12249
 It is a major assignment of scientific calculator.
-It is coded in dart language.
+Which is coded in dart language.
 It is console based Project.

@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'dart:math';
 
 void main() {
   print("Welcome to the scientific calculator!");
@@ -32,6 +33,17 @@ void main() {
   //condition for division
   else if (operation == "/") {
     outPutResult = num1 / num2;
+  } else if (operation == "sqrt") {
+    outPutResult = sqrt(num1);
+  } else if (operation == "sin") {
+    outPutResult = sin(num1);
+  } else if (operation == "cos") {
+    outPutResult = cos(num1);
+  } else if (operation == "tan") {
+    outPutResult = tan(num1);
+  } else {
+    print("Invalid operator");
+    return;
   }
   print("The result is: $outPutResult");
 }

@@ -33,15 +33,25 @@ void main() {
   //condition for division
   else if (operation == "/") {
     outPutResult = num1 / num2;
-  } else if (operation == "sqrt") {
+  }
+  //condition for square Root
+  else if (operation == "sqrt") {
     outPutResult = sqrt(num1);
-  } else if (operation == "sin") {
+  }
+  //condition for sin
+  else if (operation == "sin") {
     outPutResult = sin(num1);
-  } else if (operation == "cos") {
+  }
+  //condition for cos
+  else if (operation == "cos") {
     outPutResult = cos(num1);
-  } else if (operation == "tan") {
+  }
+  //condition for tan
+  else if (operation == "tan") {
     outPutResult = tan(num1);
-  } else {
+  }
+  //condition for wrong input
+  else {
     print("Invalid operator");
     return;
   }

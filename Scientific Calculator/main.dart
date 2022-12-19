@@ -50,7 +50,7 @@ void main() {
   else if (operation == "tan") {
     outPutResult = tan(num1);
   }
-  //condition for wrong input
+  //condition for wrong
   else {
     print("Invalid operator");
     return;

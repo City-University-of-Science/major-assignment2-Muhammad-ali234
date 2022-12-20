@@ -50,6 +50,26 @@ void main() {
   else if (operation == "tan") {
     outPutResult = tan(num1);
   }
+  //condition for acos
+  else if (operation == "acos") {
+    outPutResult = acos(num1);
+  }
+  //condition for asin
+  else if (operation == "asin") {
+    outPutResult = asin(num1);
+  }
+  //condition for atan
+  else if (operation == "atan") {
+    outPutResult = atan(num1);
+  }
+  //condition for log
+  else if (operation == "log") {
+    outPutResult = log(num1);
+  }
+  //condition for percentage
+  else if (operation == "percentage") {
+    outPutResult = (num1 / num2) * 100;
+  }
   //condition for wrong
   else {
     print("Invalid operator");

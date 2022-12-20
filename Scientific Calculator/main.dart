@@ -4,76 +4,79 @@ import 'dart:math';
 void main() {
   print("Welcome to the scientific calculator!");
 
-  //Taking input from user 1st input
+  //Taking 1st input from user
   print("Enter the first number:");
-  double num1 = double.parse(stdin.readLineSync()!);
+  String num1String = stdin.readLineSync()!;
+  double num1 = double.parse(num1String);
 
-  //Taking input from user 2st input
+  //Taking 2nd input from  user
   print("Enter the second number (if applicable):");
-  double num2 = double.parse(stdin.readLineSync()!);
+  String num2String = stdin.readLineSync()!;
+  double num2 = double.parse(num2String);
 
-  //decision input from user for calculation
-  print("Enter the operation (+, -, *, /, sqrt, sin, cos, tan):");
+  print(
+      "Enter the operation (+, -, *, /, sqrt, sin, cos, tan, acos, asin , atan, percentage, log):");
   String operation = stdin.readLineSync()!;
+  double? result;
+  switch (operation) {
 
-//put if else condition to print specific condition on specific time
-  double? outPutResult;
-  //condition for addition
-  if (operation == "+") {
-    outPutResult = num1 + num2;
+    //condition for sum
+    case '+':
+      result = num1 + num2;
+      break;
+    //condition for subtraction
+    case '-':
+      result = num1 - num2;
+      break;
+    //condition for division
+    case '/':
+      result = num1 / num2;
+      break;
+    //condition for multiplication
+    case '*':
+      result = num1 * num2;
+      break;
+    //condition for square root
+    case 'sqrt':
+      result = sqrt(num1);
+      break;
+    //condition for sin
+    case 'sin':
+      result = sin(num1);
+      break;
+    //condition for cos
+    case 'cos':
+      result = cos(num1);
+      break;
+    //condition for tan
+    case 'tan':
+      result = tan(num1);
+      break;
+    //condition for acos
+    case 'acos':
+      result = acos(num1);
+      break;
+    //condition for asin
+    case 'asin':
+      result = asin(num1);
+      break;
+    //condition for atan
+    case 'atan':
+      result = atan(num1);
+      break;
+    //condition for log
+    case 'log':
+      result = log(num1);
+      break;
+    //condition for percentage
+    case 'percentage':
+      result = (num1 / num2) * 100;
+      break;
+    //condition for wrong input
+    default:
+      print("Invalid operator");
+      return;
   }
-  //condition for subtraction
-  else if (operation == "-") {
-    outPutResult = num1 - num2;
-  }
-  //condition for Multiplication
-  else if (operation == "*") {
-    outPutResult = num1 * num2;
-  }
-  //condition for division
-  else if (operation == "/") {
-    outPutResult = num1 / num2;
-  }
-  //condition for square Root
-  else if (operation == "sqrt") {
-    outPutResult = sqrt(num1);
-  }
-  //condition for sin
-  else if (operation == "sin") {
-    outPutResult = sin(num1);
-  }
-  //condition for cos
-  else if (operation == "cos") {
-    outPutResult = cos(num1);
-  }
-  //condition for tan
-  else if (operation == "tan") {
-    outPutResult = tan(num1);
-  }
-  //condition for acos
-  else if (operation == "acos") {
-    outPutResult = acos(num1);
-  }
-  //condition for asin
-  else if (operation == "asin") {
-    outPutResult = asin(num1);
-  }
-  //condition for atan
-  else if (operation == "atan") {
-    outPutResult = atan(num1);
-  }
-  //condition for log
-  else if (operation == "log") {
-    outPutResult = log(num1);
-  }
-  //condition for percentage
-  else if (operation == "percentage") {
-    outPutResult = (num1 / num2) * 100;
-  }
-  //condition for wrong
-  else {
-    print("Invalid operator");
-    return;
-  }
-  print("The result is: $outPutResult");
+  ;
+  print("The result is: $result");
 }
